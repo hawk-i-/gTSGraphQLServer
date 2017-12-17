@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "outDir": "dist",
+        "sourceRoot": "src",
+        "sourceMap": true,
+        "watch": true
+    },
+    "exclude": [
+        "node_modules/**/*"
+    ]
+    // ,
+    // "include": [
+    //     "src/**/*"
+    // ]
+}
