@@ -1,17 +1,14 @@
-const books = require('../../data/books.json');
 import { find } from 'lodash';
-
+import { findBooks } from '../models/book';
 
 export const resolvers = {
     Query: {
         books: () => {
-            return books
+            return findBooks(() => true);
         },
         book: (obj, {id}, context, info) => {
-            console.log(id);
-            return find(books, (b) => {
-                return b.id === id;
-            });
+            let books = findBooks(b => b.id === id);
+            return books.length > 0 ? books[0] : null;
         }
     }
 };
