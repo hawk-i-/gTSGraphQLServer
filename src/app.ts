@@ -3,7 +3,7 @@ import * as bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 import { makeExecutableSchema } from 'graphql-tools';
 
-import { getResolvers, getTypeDefs } from './models';
+import { getResolvers, getTypeDefs } from './schema';
 
 // Put together a schema
   const schema = makeExecutableSchema({
